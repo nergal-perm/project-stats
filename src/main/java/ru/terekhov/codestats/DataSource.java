@@ -15,8 +15,17 @@
  * You should have received a copy of the GNU General Public License
  * along with code-stats.  If not, see <https://www.gnu.org/licenses/>.
  */
+package ru.terekhov.codestats;
 
 /**
- * Root package for the module.
+ * Interface to obtain data from external data sources.
+ * @since 1.0
  */
-package ru.terekhov.codestats;
+public interface DataSource {
+    /**
+     * Get string representation of a single data item.
+     * @param key Requested data item's key inside the data source.
+     * @return String representation of requested data item.
+     */
+    String getParsedValue(String key);
+}
